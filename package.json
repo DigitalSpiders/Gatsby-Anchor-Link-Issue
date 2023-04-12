@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-5-anchor-link-issue",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Digital Spiders <https://www.digitalspiders.io/>",
+  "dependencies": {
+    "gatsby": "^5.8.0",
+    "intersection-observer": "^0.12.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build && node ./scripts/create_redirects_file_from_cms.js",
+    "buildProd": "DOTENV_PROD=true npm run build",
+    "develop": "gatsby develop -H 0.0.0.0",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "startProd": "DOTENV_PROD=true npm start",
+    "serve": "gatsby serve -H 0.0.0.0",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "refresh": "curl -X POST http://localhost:8000/__refresh",
+    "extractTranslations": "yarn run babel --config-file ./src/translation/babel_translations.config.js 'src/**/*.{js,jsx,ts,tsx}'"
+  }
+}
